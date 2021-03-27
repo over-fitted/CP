@@ -50,5 +50,6 @@ public class Scanning {
                 count++;
         }
         pw.println(count);
+        pw.flush();
     }
 }
