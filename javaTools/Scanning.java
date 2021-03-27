@@ -1,7 +1,5 @@
 // significantly faster than scanner
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.StringTokenizer;
 
 public class Scanning {
@@ -42,6 +40,7 @@ public class Scanning {
     public static void main(String[] args)
     {
         FastReader s = new FastReader();
+        PrintWriter pw = new PrintWriter(new BufferedWriter(new OutputStreamWriter(System.out)));
         int n = s.nextInt();
         int k = s.nextInt();
         int count = 0;
@@ -50,6 +49,6 @@ public class Scanning {
             if (x % k == 0)
                 count++;
         }
-        System.out.println(count);
+        pw.println(count);
     }
 }

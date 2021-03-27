@@ -1,0 +1,27 @@
+Divider passed public testcases, WA for private testcases
+ShopeeTaman was not uploaded in time, prior to final version received TLE verdict for most test cases and WA for 1
+
+logic:
+Divider:
+Binary Search question
+create a helper to whether people can be divided into x groups with max noise level of y
+binary search for lowest max noise level threshold
+calculate total noise level with searched threshold
+
+
+ShopeeTaman:
+Recursive Backtracking + Dynamic Programming
+
+Recursive backtracking section:
+create function f with 2D array input containing fruit values of each day
+maintain state with the following:
+    which side are you on
+    result thus far
+    which day it is
+calculate the highest possible value of staying on your side (prefixSumMax) and value of crossing to other side (prefixSum last ele)
+return max(f(fruits, day + 1, result + sameSide, currentSide), f(fruits, day + 1, result + changeSide, otherSide))
+
+DP section:
+calculating value of staying and crossing is costly, so memoize it
+create 2D memo containing StayingLeft, crossing, StayingRight
+if Staying<side you are on> exists, use that value, else do the calculation for that step and memoize it
