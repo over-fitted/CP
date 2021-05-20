@@ -1,6 +1,6 @@
 def q4():
-    # print(*sorted([int(input()) for _ in range(int(input()))]), sep='\n')
-    print(input().split())
-    print(input().split())
+    map(map(range(int(input())), lambda x: int(input())).sort(), lambda x: print(x))
 
+    # ([1] * int(input())).map(lambda x: int(input())).sort().map(lambda x: print(x))
+    
 q4()
