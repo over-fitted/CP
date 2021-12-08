@@ -19,9 +19,9 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    string x;
+    getline(cin, x);
+    cout << "Thank you, " << x << ", and farewell!";
 }
 
 int main() {

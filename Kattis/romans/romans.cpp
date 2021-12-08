@@ -19,9 +19,9 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    float x;
+    cin >> x;
+    cout << (long) round((((float) 5280/4854) * x * 1000));
 }
 
 int main() {

@@ -19,9 +19,10 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    double A, I;
+    cin >> A;
+    cin >> I;
+    cout << (A * (I - 1) + 1);
 }
 
 int main() {

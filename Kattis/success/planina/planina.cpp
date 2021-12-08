@@ -19,9 +19,9 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    double x;
+    cin >> x;
+    cout << (long) pow((pow(2,x)) + 1, 2) << "\n";
 }
 
 int main() {

@@ -6,6 +6,12 @@
     "initializer_list": "cpp",
     "regex": "cpp",
     "utility": "cpp",
-    "valarray": "cpp"
+    "valarray": "cpp",
+    "ranges": "cpp",
+    "span": "cpp",
+    "*.tcc": "cpp",
+    "string": "cpp",
+    "istream": "cpp",
+    "cmath": "cpp"
   }
 }
