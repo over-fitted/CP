@@ -5,6 +5,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "Launch Mypeasoup",
+      "request": "launch",
+      "mainClass": "Mypeasoup",
+      "projectName": "CP_ef6bca08"
+    },
+    {
       "name": "gcc.exe - Build and debug active file",
       "type": "cppdbg",
       "request": "launch",
