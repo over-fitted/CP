@@ -12,6 +12,9 @@
     "*.tcc": "cpp",
     "string": "cpp",
     "istream": "cpp",
-    "cmath": "cpp"
+    "cmath": "cpp",
+    "random": "cpp",
+    "iostream": "cpp",
+    "ostream": "cpp"
   }
 }

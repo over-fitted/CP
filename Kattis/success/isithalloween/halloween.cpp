@@ -19,9 +19,10 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    string x,y;
+    cin >> x;cin>>y;
+    if ((x == "OCT" && y=="31")||(x == "DEC" && y=="25")){printf("yup\n");}
+    else{printf("nope\n");}
 }
 
 int main() {

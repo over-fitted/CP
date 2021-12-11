@@ -19,14 +19,17 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    ll cap,months,curr,remainder=0;
+    cin >> cap;
+    cin>>months;
+    REP(i,0,months){cin>>curr;remainder=remainder+cap-curr;}
+    cout<<remainder+cap;
+
 }
 
 int main() {
-    ios_base::sync_with_stdio(0);
-    cin.tie(0); cout.tie(0);
+    // ios_base::sync_with_stdio(0);
+    // cin.tie(0);
     int tc = 1;
     // cin >> tc;
     for (int t = 1; t <= tc; t++) {

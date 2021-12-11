@@ -19,14 +19,19 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    float y,z,total=0;
+    int x;
+    cin >> x;
+    REP(i, 0, x) {
+        cin >> y;
+        cin>>z;total+=y*z;
+    }
+    cout<<total<<"\n";
 }
 
 int main() {
-    ios_base::sync_with_stdio(0);
-    cin.tie(0); cout.tie(0);
+    // ios_base::sync_with_stdio(0);
+    // cin.tie(0);
     int tc = 1;
     // cin >> tc;
     for (int t = 1; t <= tc; t++) {

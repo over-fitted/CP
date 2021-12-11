@@ -19,9 +19,12 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    int x,y;
+    cin >> x;cin>>y;
+    if (x > y){printf("Odd %d",x*2);}
+    else if (y > x){printf("Odd %d",y*2);}
+    else if (y==0){printf("Not a moose");}
+    else {printf("Even %d", x*2);}
 }
 
 int main() {

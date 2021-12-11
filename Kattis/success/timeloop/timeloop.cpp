@@ -19,9 +19,11 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    int x;
+    cin >> x;
+    REP(i, 1, x + 1) {
+        cout << i << " Abracadabra\n";
+    }
 }
 
 int main() {

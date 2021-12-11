@@ -19,9 +19,10 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    ll a,b;
+    while(scanf("%llu %llu", &a, &b) != EOF){
+        printf("%llu\n", abs(a-b));
+    }
 }
 
 int main() {
