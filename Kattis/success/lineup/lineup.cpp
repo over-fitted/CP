@@ -20,9 +20,27 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    int t;
+    vector<string> a;
+    vector<string> c;
+    string b;
+    cin>>t;
+    REP(i,0,t){
+        cin>>b;
+        a.push_back(b);
+        c.push_back(b);
+    }
+    sort(begin(a),end(a));
+    if(a==c){
+        cout<<"INCREASING";
+        return;
+    }
+    reverse(begin(a),end(a));
+    if(a==c){
+        cout<<"DECREASING";
+        return;
+    }
+    cout<<"NEITHER";
 }
 
 int main() {

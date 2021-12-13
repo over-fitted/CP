@@ -11,5 +11,7 @@ int main() {
     
     // long doesnt store decimals, use float for that
 
-    //scanf needs to scan the newline as well
+    // scanf needs to scan the newline as well
+    // for printing long decimals: printf("%.6f",0-x/(y-1));
+    cout<<setprecision(15);
 }

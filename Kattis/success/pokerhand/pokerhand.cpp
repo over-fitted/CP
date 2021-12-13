@@ -17,12 +17,39 @@ const ll MOD = 1e9 + 7;
 const ll INF = 1e9;
 const ld EPS = 1e-9;
 
-
+int ha(char a){
+    if(a=='A') {
+        return 1;
+    }
+    if(a=='T'){
+        return 10;
+    }
+    if(a=='J'){
+        return 11;
+    }
+    if(a=='Q') {
+        return 12;
+    }
+    if(a=='K'){
+        return 13;
+    }
+    return a - '0';
+}
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    char x,d;
+    int a[14] = {};
+    REP(i,0,4){
+        scanf("%c%c ",&x,&d);
+        a[ha(x)]++;
+    }
+    scanf("%c%c",&x,&d);
+    a[ha(x)]++;
+    int top=0;
+    for(int x:a){
+        if (x>top)top=x;
+    }
+    cout<<top;
 }
 
 int main() {

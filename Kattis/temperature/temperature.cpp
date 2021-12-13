@@ -20,9 +20,12 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    float x,y;
+    cin>>x;cin>>y;
+    if(x==0&&y==1) cout<<"ALL GOOD\n";
+    elif(y==1) cout<<"IMPOSSIBLE\n";
+    // else cout<<0-x/(y-1);
+    printf("%.6f",0-x/(y-1));
 }
 
 int main() {

@@ -20,9 +20,26 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    int t,x,total=0;
+    int correct=0;
+    string right;
+    char qn;
+    int logged[100]={0};
+
+    for(cin >>t;t!=-1;cin>>t){
+        cin>>qn;cin>>right;
+        x = (int)qn - 65;
+        if(logged[x] != -1){
+            if(right == "right"){
+                total+=t+logged[x];
+                logged[x] = -1;
+                correct++;
+                continue;
+            }
+            logged[x]+=20;
+        }
+    }
+    cout<<correct<<" "<<total<<"\n";
 }
 
 int main() {

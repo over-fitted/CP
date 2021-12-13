@@ -20,9 +20,15 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    int x,y,z;
+    scanf("%d %d %d",&x,&y,&z);
+    REP(i,1,z+1){
+        string a="";
+        if(i%x==0)a+="Fizz";
+        if(i%y==0)a+="Buzz";
+        if(a=="")cout<<i<<"\n";
+        else cout<<a<<"\n";
+    }
 }
 
 int main() {

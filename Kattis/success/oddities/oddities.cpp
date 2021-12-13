@@ -20,16 +20,17 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    int x;
+    cin>>x;
+    if(x%2==0) cout<<x<<" is even" <<"\n";
+    else cout<<x<<" is odd" <<"\n";
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
-    int tc = 1;
-    // cin >> tc;
+    int tc;
+    cin >> tc;  
     for (int t = 1; t <= tc; t++) {
         // cout << "Case #" << t << ": ";
         solve();

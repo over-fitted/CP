@@ -17,12 +17,24 @@ const ll MOD = 1e9 + 7;
 const ll INF = 1e9;
 const ld EPS = 1e-9;
 
-
+int sim(int x){
+    if(x==1)return 1;
+    if(x<10)return 2;
+    return 3;
+}
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    string x;
+    cin>>x;
+    int len = x.length();
+    while(x!="END"){
+        if(x.length()>1){
+            cout<<1+sim(x.length())<<"\n";
+        } else{
+            cout<<sim(stoi(x))<<"\n";
+        }
+        cin>>x;
+    }
 }
 
 int main() {

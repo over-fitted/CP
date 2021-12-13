@@ -20,9 +20,12 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    int a[2] = {0};
+    char b;
+    int c;
+    while(scanf("%c%d",&b,&c)!=EOF)
+        a[(int)b-65] +=c;
+    cout<<(a[0]>a[1]?"A":"B");
 }
 
 int main() {

@@ -20,9 +20,16 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    int x,y,z,diff1,diff2;
+    scanf("%d %d %d",&x,&y,&z);
+    int store[3]={x,y,z};
+    sort(begin(store),end(store));
+    diff1=store[1]-store[0];
+    diff2=store[2]-store[1];
+    if (diff1>diff2) cout<<diff2+store[0];
+    elif(diff2>diff1) cout<<store[1]+diff1;
+    else cout<<store[2]+diff1;
+
 }
 
 int main() {

@@ -20,9 +20,18 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    int x,y,total=0;
+    int runs=0;
+    cin>>x;
+    REP(i,0,x){
+        cin>>y;
+        if(y==-1)continue;
+        runs++;total+=y;
+    }
+    if (runs==0){
+        cout<<0;return;
+    }
+    cout<<setprecision(15)<<(double)total/runs;
 }
 
 int main() {

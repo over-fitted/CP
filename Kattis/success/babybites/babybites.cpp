@@ -20,9 +20,15 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    int x;
+    string y;
+    cin>>x;
+    REP(i,1,x+1){
+        cin >>y;
+        if (y=="mumble")continue;
+        if (stoi(y)!=i){cout<<"something is fishy"<<"\n";return;}
+    }
+    cout<<"makes sense"<<"\n";
 }
 
 int main() {

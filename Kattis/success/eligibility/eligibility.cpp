@@ -18,18 +18,26 @@ const ll INF = 1e9;
 const ld EPS = 1e-9;
 
 
+int getYear(string date) {
+    return stoi(date.substr(0,4));
+}
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    string name, begin, birth;
+    int courses;
+    cin >>name;cin>>begin;cin>>birth;cin>>courses;
+    cout<<name<<" ";
+    if(getYear(begin)>=2010)cout<<"eligible"<<"\n";
+    elif(getYear(birth)>=1991)cout<<"eligible"<<"\n";
+    elif(courses>40)cout<<"ineligible"<<"\n";
+    else cout<<"coach petitions\n";
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
     int tc = 1;
-    // cin >> tc;
+    cin >> tc;
     for (int t = 1; t <= tc; t++) {
         // cout << "Case #" << t << ": ";
         solve();

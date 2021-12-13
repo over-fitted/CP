@@ -10,7 +10,6 @@ typedef pair<int,int> pi;
 #define sza(x) ((int)x.size())
 #define all(a) (a).begin(), (a).end()
 #define REP(i,a,b) for (int i = a; i < b; i++)
-#define elif else if
 
 const int MAX_N = 1e5 + 5;
 const ll MOD = 1e9 + 7;
@@ -20,9 +19,10 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    ll n,a;
+    scanf("%llu %llu", &n, &a);
+    if(n-a>0) printf("Dr. Chaz needs %llu more %s of chicken!\n",n-a,(n-a)>1?"pieces":"piece");
+    else if(a-n>0) printf("Dr. Chaz will have %llu %s of chicken left over!\n",a-n,(a-n)>1?"pieces":"piece");
 }
 
 int main() {

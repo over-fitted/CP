@@ -20,16 +20,23 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    int n;
+    int x,prev;
+    string s;
+    cin>>n;
+    cin>>prev;
+    for(int i = 2; i<=n;i++){
+        cin>>x;
+        if(x!=prev+1) {cout<<i<<"\n";getline(cin,s);return;}
+        prev=x;
+    }
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
     int tc = 1;
-    // cin >> tc;
+    cin >> tc;
     for (int t = 1; t <= tc; t++) {
         // cout << "Case #" << t << ": ";
         solve();

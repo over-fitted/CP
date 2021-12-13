@@ -20,9 +20,13 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    string x,y;
+    int a,b;
+    cin >>x;cin>>y;
+    reverse(x.begin(),x.end());
+    reverse(y.begin(),y.end());
+    a=stoi(x);b=stoi(y);
+    cout<<((a>b)?a:b);
 }
 
 int main() {

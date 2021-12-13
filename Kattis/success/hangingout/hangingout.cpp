@@ -20,9 +20,21 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    int limit,t,x,pax=0;
+    int denied=0;
+    string move;
+    cin>>limit>>t;
+    REP(i,0,t){
+        cin>>move>>x;
+        if(move=="leave"){
+            pax-=x;continue;
+        }
+        if(pax+x > limit){
+            denied++;continue;
+        }
+        pax+=x;
+    }
+    cout<<denied;
 }
 
 int main() {

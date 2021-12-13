@@ -20,9 +20,15 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    int x,y;
+    while (cin >> x) {
+        cin>>y;
+        if(x+y == 13)cout<<"Never speak again.\n";
+        elif(x==y and x==0) break;
+        elif(x>y)cout<<"To the convention.\n";
+        elif(y>x) cout<<"Left beehind.\n";
+        else cout<<"Undecided.\n";
+    }
 }
 
 int main() {

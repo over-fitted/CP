@@ -20,9 +20,14 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    int t,x;
+    cin>> t;
+    int v[t] = {1};
+    REP(i,2,t+1){
+        cin>>x;
+        v[x+1]=i;
+    }
+    for(auto x: v) cout<<x<<" ";
 }
 
 int main() {

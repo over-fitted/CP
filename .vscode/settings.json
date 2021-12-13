@@ -15,6 +15,9 @@
     "cmath": "cpp",
     "random": "cpp",
     "iostream": "cpp",
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "complex": "cpp",
+    "atomic": "cpp",
+    "iomanip": "cpp"
   }
 }

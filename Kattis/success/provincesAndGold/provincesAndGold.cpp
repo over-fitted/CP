@@ -10,7 +10,6 @@ typedef pair<int,int> pi;
 #define sza(x) ((int)x.size())
 #define all(a) (a).begin(), (a).end()
 #define REP(i,a,b) for (int i = a; i < b; i++)
-#define elif else if
 
 const int MAX_N = 1e5 + 5;
 const ll MOD = 1e9 + 7;
@@ -20,9 +19,15 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    int g,s,c,t;
+    scanf("%d %d %d\n",&g,&s,&c);
+    t=g*3+s*2+c;
+    if(t>=8)printf("Province or Gold\n");
+    else if(t>=6)printf("Duchy or Gold\n");
+    else if(t>=5)printf("Duchy or Silver\n");
+    else if(t>=3)printf("Estate or Silver\n");
+    else if(t>=2)printf("Estate or Copper\n");
+    else printf("Copper\n");
 }
 
 int main() {

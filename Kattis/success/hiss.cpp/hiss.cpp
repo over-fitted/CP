@@ -20,9 +20,15 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    char a,b='a';
+    while(scanf("%c",&a)!=EOF){
+        if(a=='s'&&b=='s'){
+            cout<<"hiss";
+            return;
+        }
+        b=a;
+    }
+    cout<<"no hiss";
 }
 
 int main() {

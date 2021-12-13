@@ -17,12 +17,19 @@ const ll MOD = 1e9 + 7;
 const ll INF = 1e9;
 const ld EPS = 1e-9;
 
-
-
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    ll min,max,x,y,i=1;
+    while(cin>>x){
+        min = INF;max=-INF;
+        cout << "Case " << i << ": ";
+        i++;
+        REP(i,0,x){
+            cin>>y;
+            if(y<min)min=y;
+            if(y>max)max=y;
+        }
+        cout<< min <<" "<<max<<" "<<max-min<<"\n";
+    }
 }
 
 int main() {

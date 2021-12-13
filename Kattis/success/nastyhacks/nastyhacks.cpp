@@ -20,17 +20,17 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    int x,y,z;
+    cin>>x;cin>>y;cin>>z;
+    cout << ((y-x>z)?"advertise":(y-x==z)?"does not matter":"do not advertise")<<"\n";
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
-    int tc = 1;
-    // cin >> tc;
-    for (int t = 1; t <= tc; t++) {
+    int tc;
+    cin >> tc;
+    for (int t = 0; t < tc; t++) {
         // cout << "Case #" << t << ": ";
         solve();
     }
@@ -38,3 +38,4 @@ int main() {
     // freopen("input.txt", "r", stdin);
     // freopen("output.txt", "w", stdout);
 }
+

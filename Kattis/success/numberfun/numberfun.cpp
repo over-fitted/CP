@@ -20,16 +20,18 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    float a,b,c;
+    scanf("%f %f %f",&a,&b,&c);
+    if((a+b==c) or (a-b==c) or (a*b==c) or (b-a==c))cout<<"Possible\n";
+    elif((a/b==c) or (b/a==c))cout<<"Possible\n";
+    else cout<<"Impossible\n";
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
     int tc = 1;
-    // cin >> tc;
+    cin >> tc;
     for (int t = 1; t <= tc; t++) {
         // cout << "Case #" << t << ": ";
         solve();

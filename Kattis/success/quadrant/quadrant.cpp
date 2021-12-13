@@ -10,7 +10,6 @@ typedef pair<int,int> pi;
 #define sza(x) ((int)x.size())
 #define all(a) (a).begin(), (a).end()
 #define REP(i,a,b) for (int i = a; i < b; i++)
-#define elif else if
 
 const int MAX_N = 1e5 + 5;
 const ll MOD = 1e9 + 7;
@@ -20,9 +19,16 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    int n,a;
+    cin>>n;cin>>a;
+
+    if(n>0){
+        if(a>0)cout<<1;
+        else cout<<4;
+    } else{
+        if(a>0)cout<<2;
+        else cout<<3;
+    }
 }
 
 int main() {

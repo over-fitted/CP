@@ -20,16 +20,42 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    int numG,numM;
+    ll x;
+    vector<ll> G;
+    vector<ll> M;
+    cin>>numG>>numM;
+    REP(i,0,numG){
+        cin>>x;
+        G.push_back(x);
+    }
+    REP(i,0,numM){
+        cin>>x;
+        M.push_back(x);
+    }
+    sort(G.begin(),G.end(),greater<ll>());
+    sort(M.begin(),M.end(),greater<ll>());
+    while(!G.empty() and !M.empty()){
+        if(G.back()>M.back()){
+            M.pop_back();
+        }
+        elif(M.back()>G.back()){
+            G.pop_back();
+        }
+        else{
+            M.pop_back();
+        }
+    }
+    if(G.empty())cout<<"MechaGodzilla"<<"\n";
+    elif(M.empty())cout<<"Godzilla\n";
+    else cout<<"uncertain\n";
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
     int tc = 1;
-    // cin >> tc;
+    cin >> tc;
     for (int t = 1; t <= tc; t++) {
         // cout << "Case #" << t << ": ";
         solve();
