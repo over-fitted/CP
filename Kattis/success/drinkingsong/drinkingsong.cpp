@@ -21,9 +21,22 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    int x;
+    string y;
+    string curr,next,nextNum;
+    cin>>x;
+    cin>>y;
+    for (int i = x;i>0;i--){
+        if(i>2){
+            printf("%d bottles of %s on the wall, %d bottles of %s.\nTake one down, pass it around, %d bottles of %s on the wall.\n\n",i,y.c_str(),i,y.c_str(),i-1,y.c_str());
+        }
+        if(i==2){
+            printf("%d bottles of %s on the wall, %d bottles of %s.\nTake one down, pass it around, %d bottle of %s on the wall.\n\n",i,y.c_str(),i,y.c_str(),i-1,y.c_str());
+        }
+        if(i==1){
+            printf("%d bottle of %s on the wall, %d bottle of %s.\nTake it down, pass it around, no more bottles of %s.\n\n",i,y.c_str(),i,y.c_str(),y.c_str());
+        }
+    }
 }
 
 int main() {

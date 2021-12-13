@@ -21,9 +21,18 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    int M,P,L,E,R,S,N;
+    int mos,pup,lar;
+    while(scanf("%d %d %d %d %d %d %d",&M,&P,&L,&E,&R,&S,&N)!=EOF){
+        ITER(N){
+            lar=M*E;
+            pup=L/R;
+            mos=P/S;
+            L=lar;P=pup;M=mos;
+        }
+        cout<<M<<"\n";
+    }
+
 }
 
 int main() {

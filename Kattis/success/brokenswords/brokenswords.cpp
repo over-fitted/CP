@@ -21,9 +21,18 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    int x;
+    int TD=0;
+    int LR=0;
+    string y;
+    cin>>x;
+    ITER(x){
+        cin>>y;
+        LR += 2-(y[2]-'0'+y[3]-'0');
+        TD += 2-(y[0]-'0'+y[1]-'0');
+    }
+    int ans=min(LR/2,TD/2);
+    printf("%d %d %d\n", ans,TD-ans*2,LR-ans*2);
 }
 
 int main() {
