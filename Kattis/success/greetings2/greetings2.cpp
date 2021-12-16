@@ -33,8 +33,14 @@ vector<string> split(string s, string delimiter){
 }
 
 void solve() {
-    // while (cin >> x) {
-    // }
+    string s;
+    ll i=1;
+    cin>>s;
+    int x;
+    x=(s.length()-2)*2;
+    string stuff(x,'e');
+    s="h"+stuff+"y";
+    cout<<s;
 }
 
 int main() {

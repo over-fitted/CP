@@ -18,23 +18,35 @@ const ll MOD = 1e9 + 7;
 const ll INF = 1e9;
 const ld EPS = 1e-9;
 
-vector<string> split(string s, string delimiter){
-    vector<string> ans;
-    size_t pos = 0;
-    std::string token;
-    while ((pos = s.find(delimiter)) != std::string::npos) {
-        token = s.substr(0, pos);
-
-        ans.push_back(token);
-        s.erase(0, pos + delimiter.length());
+bool isVowel(char c){
+    if(c=='a' or c=='e' or c=='i' or c=='o' or c=='u' or c=='y'){
+        return true;
     }
-    ans.push_back(s);
-    return ans;
+    return false;
 }
 
 void solve() {
-    // while (cin >> x) {
-    // }
+    int t;
+    while(cin>>t and t!=0){
+        int maxi = -1;
+        string ans,curr;
+        char prev;
+        ITER(t){
+            int doubles;
+            doubles = 0;
+            cin>>curr;
+            for(int i =1;i<curr.length();i++){
+                if(curr[i]==curr[i-1] and isVowel(curr[i])){
+                    doubles++;
+                }
+            }
+            if(doubles>maxi){
+                ans=curr;
+                maxi=doubles;
+            }
+        }
+        cout<<ans<<"\n";
+    }
 }
 
 int main() {

@@ -33,8 +33,23 @@ vector<string> split(string s, string delimiter){
 }
 
 void solve() {
-    // while (cin >> x) {
-    // }
+    int N,M;
+    cin>>N>>M;
+    map<int,int> s;
+    ITER(N){
+        for(int j=0;j<M;j++){
+            s[j+1+i+1] +=1;
+        }
+    }
+    int maxi=0;
+    for(auto p:s){
+        maxi=max(maxi,p.second);
+    }
+    for(auto p:s){
+        if(p.second==maxi){
+            cout<<p.first<<"\n";
+        }
+    }
 }
 
 int main() {

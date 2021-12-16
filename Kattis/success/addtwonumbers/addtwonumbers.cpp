@@ -18,23 +18,12 @@ const ll MOD = 1e9 + 7;
 const ll INF = 1e9;
 const ld EPS = 1e-9;
 
-vector<string> split(string s, string delimiter){
-    vector<string> ans;
-    size_t pos = 0;
-    std::string token;
-    while ((pos = s.find(delimiter)) != std::string::npos) {
-        token = s.substr(0, pos);
 
-        ans.push_back(token);
-        s.erase(0, pos + delimiter.length());
-    }
-    ans.push_back(s);
-    return ans;
-}
 
 void solve() {
-    // while (cin >> x) {
-    // }
+    ll a,b;
+    cin>>a>>b;
+    cout<<a+b;
 }
 
 int main() {

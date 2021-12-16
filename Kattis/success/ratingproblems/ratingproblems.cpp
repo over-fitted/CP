@@ -33,8 +33,14 @@ vector<string> split(string s, string delimiter){
 }
 
 void solve() {
-    // while (cin >> x) {
-    // }
+    float n,k,total,x;
+    cin>>n>>k;
+    ITER(k){
+        cin>>x;
+        total+=x;
+    }
+    cout<<setprecision(10);
+    cout<<(total+(n-k)*(-3))/n<<" "<<(total+(n-k)*3)/n;
 }
 
 int main() {

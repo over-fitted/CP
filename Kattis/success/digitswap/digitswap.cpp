@@ -33,8 +33,9 @@ vector<string> split(string s, string delimiter){
 }
 
 void solve() {
-    // while (cin >> x) {
-    // }
+    string s;
+    cin>>s;
+    cout<<s[1]<<s[0];
 }
 
 int main() {
