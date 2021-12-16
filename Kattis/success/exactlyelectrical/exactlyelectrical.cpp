@@ -21,9 +21,15 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    int sX,sY,eX,eY;
+    ll d;
+    cin>>sX>>sY;
+    cin>>eX>>eY;
+    cin>>d;
+    int dist = abs(eX-sX)+abs(eY-sY);
+    if(d >= dist and (d-dist)%2==0)cout<<"Y";
+    else cout<<"N";
+
 }
 
 int main() {

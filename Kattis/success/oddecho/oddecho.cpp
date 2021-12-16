@@ -21,9 +21,15 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    int t;
+    string out;
+    cin>>t;
+    ITER(t){
+        cin>>out;
+        if(i%2==0){
+            cout<<out<<"\n";
+        }
+    }
 }
 
 int main() {

@@ -21,9 +21,30 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    int numTea,numTop,k,curr,mini=MAX_N;
+    int price;
+    cin>>numTea;
+    int teaPrices[numTea+10];
+    ITER(numTea){
+        cin>>price;
+        teaPrices[i+1]=price;
+    }
+    cin>>numTop;
+    int topPrices[numTop+10];
+    ITER(numTop){
+        cin>>price;
+        topPrices[i+1]=price;
+    }
+    ITER(numTea){
+        cin>>k;
+        for(int j=0;j<k;j++){
+            cin>>curr;
+            if(teaPrices[i+1]+topPrices[curr]<mini)mini=teaPrices[i+1]+topPrices[curr];
+        }
+    }
+    int money;
+    cin>>money;
+    cout<<min((money/mini)-1,0);
 }
 
 int main() {

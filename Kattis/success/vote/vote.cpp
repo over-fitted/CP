@@ -21,16 +21,37 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    ll numVotes,winner,curr,total;
+    numVotes=curr=total=0;
+    int numCan;
+    cin>>numCan;
+    ITER(numCan){
+        cin>>curr;
+        total+=curr;
+        if(curr==numVotes){
+            winner=-1;
+        }
+        if(curr>numVotes){
+            numVotes=curr;
+            winner=i+1;
+        }
+    }
+    if(winner == -1){
+        cout<<"no winner\n";
+        return;
+    }
+    if(numVotes>total/2){
+        cout<<"majority winner "<<winner<<"\n";
+        return;
+    }
+    cout<<"minority winner "<<winner<<"\n";
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
     int tc = 1;
-    // cin >> tc;
+    cin >> tc;
     for (int t = 1; t <= tc; t++) {
         // cout << "Case #" << t << ": ";
         solve();

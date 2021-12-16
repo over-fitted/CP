@@ -21,18 +21,38 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    string have,target;
+    int ones,zeros,questions,steps,targetones;
+    ones=zeros=questions=steps=targetones=0;
+    cin>>have;cin>>target;
+    ITER(have.length()){
+        if(have[i]!=target[i]){
+            if(target[i]=='1'){
+                targetones++;
+            }
+            if(have[i]=='1'){
+                ones++;
+            }
+            elif(have[i]=='?'){
+                questions++;
+            }
+            else zeros++;
+        }
+    }
+    if(ones>targetones){
+        cout<<"-1\n";
+        return;
+    }
+    cout<<questions+ones+max(0,zeros-ones)<<"\n";
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
     int tc = 1;
-    // cin >> tc;
+    cin >> tc;
     for (int t = 1; t <= tc; t++) {
-        // cout << "Case #" << t << ": ";
+        cout << "Case " << t << ": ";
         solve();
     }
 

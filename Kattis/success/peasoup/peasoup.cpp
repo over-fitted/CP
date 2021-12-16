@@ -21,9 +21,26 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    int numRes,numItems;
+    string item,resName;
+    bool foundPea,foundPan;
+    cin>>numRes;
+    ITER(numRes){
+        foundPan=foundPea=false;
+        cin>>numItems;
+        cin.ignore();
+        getline(cin,resName);
+        ITER(numItems){
+            getline(cin,item);
+            if(item=="pea soup")foundPea=true;
+            if(item=="pancakes")foundPan=true;
+        }
+        if(foundPan and foundPea){
+            cout<<resName;
+            return;
+        }
+    }
+    cout<<"Anywhere is fine I guess";
 }
 
 int main() {

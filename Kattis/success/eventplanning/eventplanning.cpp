@@ -21,9 +21,28 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    ll n,b,h,w,cheap,price;
+    int space;
+    cheap=MAX_N;
+    string buff;
+    cin>>n>>b>>h>>w;
+    ITER(h){
+        cin>>price;
+        if(price<cheap and n*price<=b){
+            ITER(w){
+                cin>>space;
+                if(space>=n){
+                    cheap=price;
+                }
+            }
+        }
+        else {
+            cin.ignore();
+            getline(cin, buff);
+        } 
+    }
+    if(cheap==MAX_N)cout<<"stay home\n";
+    else cout<<cheap*n;
 }
 
 int main() {

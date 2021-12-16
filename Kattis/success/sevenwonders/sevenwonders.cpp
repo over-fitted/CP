@@ -10,7 +10,7 @@ typedef pair<int,int> pi;
 #define sza(x) ((int)x.size())
 #define all(a) (a).begin(), (a).end()
 #define REP(i,a,b) for (int i = a; i < b; i++)
-#define ITER(x) for (int i = 0; i < x; i++)
+#define ITER(x) for (int hjasklASDF = 0; hjasklASDF < x; hjasklASDF++)
 #define elif else if
 
 const int MAX_N = 1e5 + 5;
@@ -21,9 +21,20 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    string x;
+    int t,c,g,total;
+    t=c=g=total=0;
+    cin>>x;
+    for(int i=0;i<x.length();i++){
+        if (x[i]=='T')t++;
+        if (x[i]=='C')c++;
+        if (x[i]=='G')g++;
+    }
+    total+=t*t+c*c+g*g;
+    int mini=min(t,c);
+    mini=min(mini,g);
+    total+=mini*7;
+    cout<<total<<"\n";
 }
 
 int main() {

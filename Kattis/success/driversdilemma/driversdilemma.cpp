@@ -21,9 +21,22 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    float c,leak,eff,time,m;
+    int speed;
+    int maxSpeed=-1;
+    cin>>c>>leak>>m;
+    ITER(6){
+        cin>>speed>>eff;
+        
+        time=m/speed;
+        float actLeak=leak*time;
+        float actSpend=m/eff;
+        if(actLeak+actSpend<=c/2){
+            maxSpeed=speed;
+        }
+    }
+    if(maxSpeed==-1)cout<<"NO";
+    else cout<<"YES "<<maxSpeed;
 }
 
 int main() {

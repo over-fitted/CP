@@ -21,9 +21,21 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    int n,r,k;
+    cin>>n>>r>>k;
+    // go up to office, then go to registration from office, then go home
+    if(k+abs(r-k)>=n){
+        cout<<k+abs(r-k)+r;
+    }
+    else {
+        // go to office then registration is either both odd or both even, so can pad (padding always even)
+        if(n%2==r%2){
+            cout<<n+r;
+            return;
+        }
+        // one odd and one even, need to pad one non-essential step
+        cout<<n+r+1;
+    }
 }
 
 int main() {

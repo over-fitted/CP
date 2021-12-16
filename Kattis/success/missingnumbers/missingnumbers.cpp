@@ -21,9 +21,20 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    int t,x,last=0;
+    bool corr=true;
+    cin>>t;
+    ITER(t){
+        cin>>x;
+        if(x>last+1){
+            for (int i=last+1;i<x;i++){
+                cout<<i<<"\n";
+            }
+            corr=false;
+        }
+        last = x;
+    }
+    if(corr)cout<<"good job";
 }
 
 int main() {

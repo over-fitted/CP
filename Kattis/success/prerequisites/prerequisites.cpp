@@ -21,9 +21,31 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    int courses,categories,x;
+    cin>>courses;
+    while(courses!=0){
+        cin>>categories;
+        bool succ=true;
+        set<int> c;
+        cin.ignore();
+        ITER(courses){
+            cin>>x;
+            c.insert(x);
+        }
+        ITER(categories){
+            int possible,mini,y;
+            cin>>possible>>mini;
+            ITER(possible){
+                cin>>y;
+                if(c.count(y)>0){
+                    mini-=1;
+                }
+            }
+            if(mini>0)succ=false;
+        }
+        cout<<(succ?"yes":"no")<<"\n";
+        cin>>courses;
+    }
 }
 
 int main() {

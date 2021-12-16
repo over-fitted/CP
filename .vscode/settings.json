@@ -23,6 +23,12 @@
     "chrono": "cpp",
     "latch": "cpp",
     "limits": "cpp",
-    "semaphore": "cpp"
+    "semaphore": "cpp",
+    "deque": "cpp",
+    "forward_list": "cpp",
+    "list": "cpp",
+    "unordered_map": "cpp",
+    "unordered_set": "cpp",
+    "vector": "cpp"
   }
 }

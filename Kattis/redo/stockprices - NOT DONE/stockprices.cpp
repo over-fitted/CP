@@ -41,6 +41,7 @@ void solve() {
     priority_queue<int, std::vector<int>> buys;
     priority_queue<int, std::vector<int>, std::greater<int>> sells;
     ITER(trans){
+        cin.ignore();
         cin>>type;
         cin >> num;
         cin>>buffer;cin>>buffer;cin>>price;

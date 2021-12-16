@@ -21,9 +21,13 @@ const ld EPS = 1e-9;
 
 
 void solve() {
-    
-    // while (cin >> x) {
-    // }
+    float o,a,p,ro,ra,rp;
+    cin>>o>>a>>p;
+    cin>>ro>>ra>>rp;
+    float drinks=min(min(o/ro,a/ra),p/rp);
+    cout<<fixed;
+    cout<<setprecision(10);
+    cout<<o-drinks*ro<<" "<<a-drinks*ra<<" "<<p-drinks*rp<<"\n";
 }
 
 int main() {
