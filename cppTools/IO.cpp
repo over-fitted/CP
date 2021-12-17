@@ -7,6 +7,10 @@ int main() {
     string x;
     getline(cin, x);
 
+    // get just one char
+    char c;
+    cin.get(c);
+
     // if output number is in scientific notation i.e. 1.67854e+07, convert to long or use cout << fixed
     
     // long doesnt store decimals, use float for that
