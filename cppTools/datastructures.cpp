@@ -1,11 +1,20 @@
 #include <bits/stdc++.h>
-
+#define ITER(x) for (int i = 0; i < x; i++)
 using namespace std;
 
 int main(){
     // arrays
     int myArray[10] = { 0 }; // all elements 0
     vector<int> v(10,5); //size 10, init to 5
+
+    //iterating through a 3d array
+    int A[5][5] = {};
+    ITER((sizeof(A)/sizeof(*A))){
+        for(auto b:A[i]){
+            cout<<b;
+        }
+        cout<<"\n";
+    }
 
     //strings
     string a = "hatti";
