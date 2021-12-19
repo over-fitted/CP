@@ -2,6 +2,11 @@
 #define ITER(x) for (int i = 0; i < x; i++)
 using namespace std;
 
+string tolower(string x){
+    std::transform(x.begin(), x.end(), x.begin(), [](unsigned char c){ return std::tolower(c); });
+    return x;
+}
+
 int main(){
     // arrays
     int myArray[10] = { 0 }; // all elements 0

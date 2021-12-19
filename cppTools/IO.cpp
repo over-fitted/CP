@@ -19,4 +19,7 @@ int main() {
     // for printing long decimals: printf("%.6f",0-x/(y-1));
     // printf with string args need to use x.c_str(), but better use cout
     cout<<setprecision(15);
+
+    // checks if next character is a letter
+    isalpha(cin.peek());
 }
