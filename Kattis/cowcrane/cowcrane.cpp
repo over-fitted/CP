@@ -33,23 +33,18 @@ vector<string> split(string s, string delimiter){
 }
 
 void solve() {
-    int n,total,conc,x;
-    float next;
-    cin>>n;
-    total =conc=next =0;
-    ITER(n){
-      cin>>x;
-      if(x>=next){
-        total++;
-        conc=1;
-        next=x+20;
-      }
-      else{
-        next=next*conc/(conc+1);
-        conc++;
-      }
+    ll m,l,M,L,tm,tl;
+    cin>>m>>l;
+    cin>>M>>L;
+    cin>>tm>>tl;
+    // l is further away
+    if(m<l){
+        //need to move l first
+        if(m+abs(M-m)+abs(l-M)+abs(L-l)>tl){
+            
+        }
     }
-    cout<<total;
+
 }
 
 int main() {
