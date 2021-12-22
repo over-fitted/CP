@@ -33,43 +33,13 @@ vector<string> split(string s, string delimiter){
 }
 
 void solve() {
-    ll m,l,M,L,tm,tl,dl,dm;
-    cin>>m>>l;
-    cin>>M>>L;
-    cin>>tm>>tl;
-
-    // l first, mlLlM
-    dl=abs(m)+abs(l-m)+abs(L-l);
-    dm=dl+abs(l-L)+abs(M-l);
-    if(dl<=tl and dm<=tm){
-        cout<<"possible\n";
-        return;
+    ll w,n,wi,li,area=0;
+    cin>>w;cin>>n;
+    ITER(n){
+        cin>>wi>>li;
+        area+=wi*li;
     }
-
-    // m first, lmMmL
-    dm=abs(l)+abs(m-l)+abs(M-m);
-    dl=dm+abs(m-M)+abs(L-m);
-    if(dl<=tl and dm<=tm){
-        cout<<"possible\n";
-        return;
-    }
-
-    // mMlL
-    dm = abs(m)+abs(M-m);
-    dl=dm+abs(l-M)+abs(L-l);
-    if(dl<=tl and dm<=tm){
-        cout<<"possible\n";
-        return;
-    }
-
-    //lLmM
-    dl = abs(l)+abs(L-l);
-    dm=dl+abs(m-L)+abs(M-m);
-    if(dl<=tl and dm<=tm){
-        cout<<"possible\n";
-        return;
-    }
-    cout<<"impossible\n";
+    cout<<area/w;
 }
 
 int main() {

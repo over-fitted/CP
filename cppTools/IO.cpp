@@ -22,4 +22,7 @@ int main() {
 
     // checks if next character is a letter
     isalpha(cin.peek());
+
+    // ignores rest of line of input
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
 }
