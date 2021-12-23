@@ -33,35 +33,30 @@ vector<string> split(string s, string delimiter){
 }
 
 void solve() {
-    ll n,prev,x;
-
-    while(cin>>n){
-        bitset<32> b;
-        bool nt = false;
-        cin>>prev;
-        ITER(n-1){
-            cin>>x;
-            if(abs(x-prev)<1 or abs(x-prev)>=n or b[abs(x-prev)]==1){
-                cout<<"Not jolly\n";
-                cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                nt=true;
-                break;
-            }
-            b[abs(x-prev)]=1;
-            prev=x;
-        }
-        if(!nt)cout<<"Jolly\n";
-        cout<<b<<"\n";
+    int g;ll c;
+    unordered_set<ll> s;
+    cin>>g;
+    ITER(g){
+        cin>>c;
+        // cout<<"seen "<<c<<"\n";
+        if(s.count(c)>0)s.erase(c);
+        else s.insert(c);
     }
+    int ans=0;
+    for(ll x:s){
+        cout<<x<<"\n";
+        ans++;
+    }
+    // cout<<ans<<"\n";
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
     int tc = 1;
-    // cin >> tc;
+    cin >> tc;
     for (int t = 1; t <= tc; t++) {
-        // cout << "Case #" << t << ": ";
+        cout << "Case #" << t << ": ";
         solve();
     }
 
