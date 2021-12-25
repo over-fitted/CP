@@ -7,6 +7,31 @@ string tolower(string x){
     return x;
 }
 
+template <typename T>
+void printArr(T *arr, unsigned int n)
+{
+   int i;
+   for (i = 0; i < n; i++)
+     cout <<" "<< arr[i];
+}
+
+template <typename T>
+void printVec(vector<T> path){
+    for (T i: path)
+    std::cout << i << ' ';
+    cout<<"\n";
+}
+
+template <typename T>
+bool vecIsUnique(vector<T> v){
+    unordered_set<T> s;
+    for (T i: v){
+        if(s.count(i)>0)return false;
+        s.insert(i);
+    }
+    return true;
+}
+
 int main(){
     // arrays
     int myArray[10] = { 0 }; // all elements 0

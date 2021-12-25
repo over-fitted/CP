@@ -32,40 +32,50 @@ vector<string> split(string s, string delimiter){
     return ans;
 }
 
-double average(vector<ll> x, int avoid){
-    double ans=0;
-    int done=0;
-    ITER(x.size()){
-        if(i!=avoid){ans+=x[i]*pow(4/5.0, done);done++;}
-    }
-    return ans/5;
+void printArr(int *arr, unsigned int n) {
+   int i;
+   cout<<"{";
+   for (i = 0; i < n; i++) cout <<arr[i]<<",";
+   cout<<"}";
+
 }
+// vector<vector<int>> v{{2},{3,2},{4,2,3},{3,2,5,4},{4,2,5,6,3},{5,2,7,4,3,6}{6,2,4,5,3,7,8},{4,2,8,6,3,7,9,5},{8,2,9,7,3,10,5,6,4},{10,2,9,6,3,5,8,7,4,11},{6,2,7,5,3,11,12,8,4,9,10},{8,2,5,10,3,12,11,9,4,7,6,13,},{4,1,13,11,2,10,6,7,3,5,12,9,8,}};
 
 void solve() {
-    int n;
-    ll score;
-    double ans=0;
-    vector<ll> v;
+    vector<vector<int>> v{{2},{3,2},{4,2,3},{3,2,5,4},{4,2,5,6,3},{5,2,7,4,3,6},{6,2,4,5,3,7,8},{4,2,8,6,3,7,9,5},{8,2,9,7,3,10,5,6,4},{10,2,9,6,3,5,8,7,4,11},{6,2,7,5,3,11,12,8,4,9,10},{8,2,5,10,3,12,11,9,4,7,6,13,},{5,2,14,12,3,11,7,8,4,6,13,10,9,}};
+    int n,x;
     cin>>n;
     ITER(n){
-        cin>>score;
-        v.push_back(score);
-        ans+=score*pow(4/5.0, i);
+        cin>>x;
+        for(int a:v[x-1]){
+            cout<<a-1<<" ";
+        }
+        cout<<"\n";
     }
-    cout<<ans/5<<"\n";
-    double cumu=0;
-    ITER(n){
-        cumu+=average(v,i);
-    }
-    cout<<cumu/n;
 }
+
+// used to precalc all
+// void solve() {
+//     queue<int> q({1});
+//     int ans[14]={};
+//     REP(j,1,2){
+//         ITER(j){
+//             int a=q.front();
+//             q.pop();
+//             q.push(a);
+//         }
+//         cout<<q.front()<<"\n";
+//         ans[q.front()]=j+1;
+//         q.pop();
+//     }
+//     printArr(ans,14);
+// }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
     int tc = 1;
     // cin >> tc;
-    cout<<setprecision(10);
     for (int t = 1; t <= tc; t++) {
         // cout << "Case #" << t << ": ";
         solve();

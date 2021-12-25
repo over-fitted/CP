@@ -6,6 +6,16 @@ int sumOfDigits(int n){
     return n==0?0:n%10+sumOfDigits(n/10);
 }
 
+template <typename T>
+vector<int> digitsVec(T n){
+    vector<int> v;
+    while(n!=0){
+        v.push_back(n%10);
+        n/=10;
+    }
+    return v;
+}
+
 string toBinary(int n)
 {
     string r;
