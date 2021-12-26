@@ -33,8 +33,14 @@ vector<string> split(string s, string delimiter){
 }
 
 void solve() {
-    // while (cin >> x) {
+    int B , Br, Bs, A, As;
+    cin>>B>>Br>>Bs>>A>>As;
+    double target = (Br-B)*Bs+EPS;
+    // while(target>=0){
+    //     target-=As;
+
     // }
+    cout<<A+ceil(target/As);
 }
 
 int main() {
@@ -42,7 +48,6 @@ int main() {
     cin.tie(0); cout.tie(0);
     int tc = 1;
     // cin >> tc;
-    // cout<<setprecision(10)<<fixed;
     for (int t = 1; t <= tc; t++) {
         // cout << "Case #" << t << ": ";
         solve();

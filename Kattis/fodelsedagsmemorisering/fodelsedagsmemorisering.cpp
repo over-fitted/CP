@@ -33,8 +33,31 @@ vector<string> split(string s, string delimiter){
 }
 
 void solve() {
-    // while (cin >> x) {
-    // }
+    int n;
+    string s,date;
+    ll c;
+    unordered_map<string, pair<int, string>> m;
+    cin>>n;
+    ITER(n){
+        cin>>s>>c>>date;
+        if(m.count(date)==0){
+            m[date]=pair<int,string>(c,s);
+        }
+        else {
+            if(m[date].first<c){
+                m[date]=pair<int,string>(c,s);
+            }
+        }
+    }
+    vector<string> peeps;
+    for(auto p:m){
+        peeps.push_back(p.second.second);
+    }
+    sort(peeps.begin(),peeps.end());
+    cout<<peeps.size()<<"\n";
+    for(string s:peeps){
+        cout<<s<<"\n";
+    }
 }
 
 int main() {

@@ -23,5 +23,12 @@ string toBinary(int n)
     return r;
 }
 
-string a=toBinary(12);
-cout<<stoi(a,0,2);
+int nearestSquare(int n){
+    return pow(ceil(sqrt(n)),2);
+}
+
+int main(){
+    // string a=toBinary(12);
+    // cout<<stoi(a,0,2);
+    // cout<<nearestSquare(5);
+}

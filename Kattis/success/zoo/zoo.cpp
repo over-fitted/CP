@@ -32,9 +32,30 @@ vector<string> split(string s, string delimiter){
     return ans;
 }
 
+string tolower(string x){
+    std::transform(x.begin(), x.end(), x.begin(), [](unsigned char c){ return std::tolower(c); });
+    return x;
+}
+
 void solve() {
-    // while (cin >> x) {
-    // }
+    int num;
+    int tc=1;
+    string s;
+    while(cin>>num and num!=0){
+        cin.ignore();
+        map<string, int> m;
+        ITER(num){
+            getline(cin,s);
+            vector<string> splitName = split(s," ");
+            string name = tolower(splitName[splitName.size()-1]);
+            m[name]++;
+        }
+        cout<<"List "<<tc<<":\n";
+        for(auto p:m){
+            cout<<p.first<<" | "<<p.second<<"\n";
+        }
+        tc++;
+    }
 }
 
 int main() {
@@ -42,7 +63,6 @@ int main() {
     cin.tie(0); cout.tie(0);
     int tc = 1;
     // cin >> tc;
-    // cout<<setprecision(10)<<fixed;
     for (int t = 1; t <= tc; t++) {
         // cout << "Case #" << t << ": ";
         solve();

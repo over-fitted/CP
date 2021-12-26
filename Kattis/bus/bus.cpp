@@ -33,15 +33,21 @@ vector<string> split(string s, string delimiter){
 }
 
 void solve() {
-    // while (cin >> x) {
-    // }
+    int x;
+    cin>>x;
+    double ans = 0;
+    ITER(x){
+        ans+=0.5;
+        ans*=2;
+    }
+    cout<<(ll)ans<<"\n";
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
     int tc = 1;
-    // cin >> tc;
+    cin >> tc;
     // cout<<setprecision(10)<<fixed;
     for (int t = 1; t <= tc; t++) {
         // cout << "Case #" << t << ": ";

@@ -33,8 +33,14 @@ vector<string> split(string s, string delimiter){
 }
 
 void solve() {
-    // while (cin >> x) {
-    // }
+    string x;
+    getline(cin,x);
+    vector<string> v = split(x," ");
+    float ae=0;
+    for(string s:v){
+        if(s.find("ae")!=string::npos)ae++;
+    }
+    cout<<(ae/v.size()>=0.4?"dae ae ju traeligt va":"haer talar vi rikssvenska");
 }
 
 int main() {

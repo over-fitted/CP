@@ -32,9 +32,38 @@ vector<string> split(string s, string delimiter){
     return ans;
 }
 
+ll bSearchNearestHigher(ll target, vector<ll> v,ll start, ll end){
+    if(v[start]>=target) return start;
+    if(v[end] < target) return -1;
+    ll halfWay = start + (end-start)/2;
+    if(v[halfWay]<target)return bSearchNearestHigher(target,v,halfWay+1,end);
+    return bSearchNearestHigher(target,v,start,halfWay);
+}
+
+unordered_map<int, ll> memo;
+
+ll minimised(int currIndex, vector<ll>v,ll s,ll p,ll m){
+    if(memo.count(currIndex)>0)return memo[currIndex];
+    if(currIndex>v.size()-1){
+        return 0;
+    }
+    ll nextInd = bSearchNearestHigher(v[currIndex]+m,v,currIndex+1,v.size()-1);
+    ll ans;
+    if(nextInd==-1)ans= min(s+minimised(currIndex+1,v,s,p,m),p);
+    else ans= min(s+minimised(currIndex+1,v,s,p,m),p+minimised(nextInd,v,s,p,m));
+    memo[currIndex]=ans;
+    return ans;
+}
+
 void solve() {
-    // while (cin >> x) {
-    // }
+    ll s,p,n,m,x;
+    cin>>s>>p>>m>>n;
+    vector<ll> v;
+    ITER(n){
+        cin>>x;
+        v.push_back(x);
+    }
+    cout<<minimised(0,v,s,p,m);
 }
 
 int main() {

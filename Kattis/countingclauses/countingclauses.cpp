@@ -33,8 +33,9 @@ vector<string> split(string s, string delimiter){
 }
 
 void solve() {
-    // while (cin >> x) {
-    // }
+    int ans;
+    cin>>ans;
+    cout<<(ans<8?"unsatisfactory":"satisfactory");
 }
 
 int main() {

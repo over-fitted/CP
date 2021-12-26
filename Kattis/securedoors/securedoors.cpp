@@ -33,8 +33,28 @@ vector<string> split(string s, string delimiter){
 }
 
 void solve() {
-    // while (cin >> x) {
-    // }
+    unordered_set<string> s;
+    int n;
+    string x,name;
+    cin>>n;
+    ITER(n){
+        cin>>x;cin>>name;
+        if(x=="entry"){
+            cout<<name<<" entered";
+            if(s.count(name)>0){
+                cout<<" (ANOMALY)";
+            }
+            s.insert(name);
+        }
+        else {
+            cout<<name<<" exited";
+            if(s.count(name)==0){
+                cout<<" (ANOMALY)";
+            }
+            s.erase(name);
+        }
+        cout<<"\n";
+    }
 }
 
 int main() {

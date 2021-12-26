@@ -33,8 +33,19 @@ vector<string> split(string s, string delimiter){
 }
 
 void solve() {
-    // while (cin >> x) {
-    // }
+    string a[4]={"North","West","South","East"};
+    map<string, int> b = {{"North",0},{"West",1},{"South",2},{"East",3}};
+    string arr,lea,oth;
+    cin>>arr>>lea>>oth;
+    if(a[(b[arr]+2)%4] == lea){
+        if(a[(b[arr]+1)%4] == oth)cout<<"Yes";
+        else cout<<"No";
+    }
+    elif(a[(b[arr]+3)%4] == lea){
+        if(a[(b[arr]+1)%4] == oth or a[(b[arr]+2)%4] == oth)cout<<"Yes";
+        else cout<<"No";
+    }
+    else cout<<"No";
 }
 
 int main() {

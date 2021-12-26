@@ -33,8 +33,15 @@ vector<string> split(string s, string delimiter){
 }
 
 void solve() {
-    // while (cin >> x) {
-    // }
+    int n,x,prev,ans=1;
+    cin>>n;
+    cin>>prev;
+    ITER(n-1){
+        cin>>x;
+        if(x<prev)ans++;
+        prev=x;
+    }
+    cout<<ans;
 }
 
 int main() {
@@ -42,7 +49,6 @@ int main() {
     cin.tie(0); cout.tie(0);
     int tc = 1;
     // cin >> tc;
-    // cout<<setprecision(10)<<fixed;
     for (int t = 1; t <= tc; t++) {
         // cout << "Case #" << t << ": ";
         solve();

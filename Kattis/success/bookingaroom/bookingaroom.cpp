@@ -33,8 +33,20 @@ vector<string> split(string s, string delimiter){
 }
 
 void solve() {
-    // while (cin >> x) {
-    // }
+    int r,n,x;
+    cin>>r>>n;
+    bool notAvail[r]={};
+    ITER(n){
+        cin>>x;
+        notAvail[x-1]=true;
+    }
+    ITER(r){
+        if(!notAvail[i]){
+            cout<<i+1;
+            return;
+        }
+    }
+    cout<<"too late";
 }
 
 int main() {
@@ -42,7 +54,6 @@ int main() {
     cin.tie(0); cout.tie(0);
     int tc = 1;
     // cin >> tc;
-    // cout<<setprecision(10)<<fixed;
     for (int t = 1; t <= tc; t++) {
         // cout << "Case #" << t << ": ";
         solve();

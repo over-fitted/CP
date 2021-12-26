@@ -32,19 +32,24 @@ vector<string> split(string s, string delimiter){
     return ans;
 }
 
+ll APSum(ll start, ll interval, ll numberOfEle){
+    return (numberOfEle/2.0)*(2*start + (numberOfEle-1)*interval);
+}
+
 void solve() {
-    // while (cin >> x) {
-    // }
+    int d,x;
+    cin>>d>>x;
+    cout<<APSum(1,1,x)<<" "<<APSum(1,2,x)<<" "<<APSum(2,2,x)<<"\n";
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
     int tc = 1;
-    // cin >> tc;
-    // cout<<setprecision(10)<<fixed;
+    cin >> tc;
+    cout<<setprecision(10)<<fixed;
     for (int t = 1; t <= tc; t++) {
-        // cout << "Case #" << t << ": ";
+        cout << t << " ";
         solve();
     }
 

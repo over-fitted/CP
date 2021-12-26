@@ -7,6 +7,7 @@ string tolower(string x){
     return x;
 }
 
+// 1d array
 template <typename T>
 void printArr(T *arr, unsigned int n)
 {
@@ -15,6 +16,8 @@ void printArr(T *arr, unsigned int n)
      cout <<" "<< arr[i];
 }
 
+
+// 1d vector
 template <typename T>
 void printVec(vector<T> path){
     for (T i: path)
@@ -30,6 +33,45 @@ bool vecIsUnique(vector<T> v){
         s.insert(i);
     }
     return true;
+}
+
+// 2d vector manipulation
+template <typename T>
+vector<vector<T>> transpose(vector<vector<T>> v){
+    vector<vector<T>> ans(v[0].size(),vector<T>(v.size()));
+    REP(i,0,v.size()){
+        REP(j,0,v[0].size()){
+            ans[j][i]=v[i][j];
+        }
+    }
+    return ans;
+}
+
+template <typename T>
+vector<vector<T>> rotateCounterClockwise(vector<vector<T>> v){
+    ITER(v.size()){
+        reverse(v[i].begin(),v[i].end());
+    }
+    return transpose(v);
+}
+
+template <typename T>
+vector<vector<T>> rotateClockwise(vector<vector<T>> v){
+    v=transpose(v);
+    ITER(v.size()){
+        reverse(v[i].begin(),v[i].end());
+    }
+    return v;
+}
+
+template <typename T>
+vector<vector<T>> print2dVec(vector<vector<T>> v){
+    REP(i,0,v.size()){
+        REP(j,0,v[0].size()){
+            cout<<v[i][j];
+        }
+        cout<<"\n";
+    }
 }
 
 int main(){

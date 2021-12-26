@@ -32,9 +32,29 @@ vector<string> split(string s, string delimiter){
     return ans;
 }
 
+template <typename T>
+void printVec(vector<T> path){
+    for (T i: path)
+    std::cout << i << ' ';
+    cout<<"\n";
+}
+
 void solve() {
-    // while (cin >> x) {
-    // }
+    int a,b,c;
+    cin>>a>>b>>c;
+    vi store = {a,b,c};
+    string x;
+    cin>>x;
+    int ans[3];
+    sort(store.begin(),store.end());
+    ITER(3){
+        if(x[i]=='A')ans[i]=store[0];
+        elif(x[i]=='B')ans[i]=store[1];
+        else ans[i]=store[2];
+    }
+    ITER(3){
+        cout<<ans[i]<<" ";
+    }
 }
 
 int main() {

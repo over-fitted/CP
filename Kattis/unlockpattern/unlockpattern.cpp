@@ -32,9 +32,25 @@ vector<string> split(string s, string delimiter){
     return ans;
 }
 
+template <typename T>
+double eucliDist(T x1, T y1, T x2, T y2){
+    return sqrt(pow(x1-x2,2)+pow(y1-y2,2));
+}
+
 void solve() {
-    // while (cin >> x) {
-    // }
+    int x;
+    unordered_map<int,pi> m;
+    ITER(3){
+        REP(j,0,3){
+            cin>>x;
+            m[x]=pi(i,j);
+        }
+    }
+    double dist;
+    REP(i,1,9){
+        dist+=eucliDist(m[i].first, m[i].second,m[i+1].first, m[i+1].second);
+    }
+    cout<<dist;
 }
 
 int main() {
@@ -42,7 +58,7 @@ int main() {
     cin.tie(0); cout.tie(0);
     int tc = 1;
     // cin >> tc;
-    // cout<<setprecision(10)<<fixed;
+    cout<<setprecision(10)<<fixed;
     for (int t = 1; t <= tc; t++) {
         // cout << "Case #" << t << ": ";
         solve();

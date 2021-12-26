@@ -10,7 +10,7 @@ typedef pair<int,int> pi;
 #define sza(x) ((int)x.size())
 #define all(a) (a).begin(), (a).end()
 #define REP(i,a,b) for (int i = a; i < b; i++)
-#define ITER(x) for (int i = 0; i < x; i++)
+#define ITER(x) for (ll i = 0; i < x; i++)
 #define elif else if
 
 const int MAX_N = 1e5 + 5;
@@ -33,16 +33,21 @@ vector<string> split(string s, string delimiter){
 }
 
 void solve() {
-    // while (cin >> x) {
-    // }
+    int n;ll m;int a,b;
+    string dump;
+    cin>>n>>m;
+    cin.ignore();
+    ITER(m){
+        getline(cin,dump);
+    }
+    cout<<n-1<<"\n";
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
     int tc = 1;
-    // cin >> tc;
-    // cout<<setprecision(10)<<fixed;
+    cin >> tc;
     for (int t = 1; t <= tc; t++) {
         // cout << "Case #" << t << ": ";
         solve();

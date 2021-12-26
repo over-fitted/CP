@@ -32,9 +32,46 @@ vector<string> split(string s, string delimiter){
     return ans;
 }
 
+template <typename T>
+void printVec(vector<T> path){
+    for (T i: path)
+    std::cout << i << ' ';
+    cout<<"\n";
+}
+
 void solve() {
-    // while (cin >> x) {
-    // }
+    string catchp;
+    getline(cin,catchp);
+    int num = split(catchp, " ").size();
+    vector<string> team1;
+    vector<string> team2;
+    vector<string> all;
+    int pax;
+    cin>>pax;
+    ITER(pax){
+        cin>>catchp;
+        all.push_back(catchp);
+    }
+    int startPos = 0;
+    bool first = true;
+    while(!all.empty()){
+        startPos +=num-1;
+        startPos%=all.size();
+        if(first)team1.push_back(all[startPos]);
+        else team2.push_back(all[startPos]);
+        all.erase(all.begin()+startPos); 
+        first=!first;  
+
+    }
+    cout<<team1.size()<<"\n";
+    for(string s:team1){
+        cout<<s<<"\n";
+    }
+    cout<<team2.size()<<"\n";
+    for(string s:team2){
+        cout<<s<<"\n";
+    }
+
 }
 
 int main() {
@@ -42,7 +79,6 @@ int main() {
     cin.tie(0); cout.tie(0);
     int tc = 1;
     // cin >> tc;
-    // cout<<setprecision(10)<<fixed;
     for (int t = 1; t <= tc; t++) {
         // cout << "Case #" << t << ": ";
         solve();

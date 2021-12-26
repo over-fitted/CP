@@ -33,8 +33,9 @@ vector<string> split(string s, string delimiter){
 }
 
 void solve() {
-    // while (cin >> x) {
-    // }
+    int c,r;
+    cin>>r>>c;
+    cout<<(double)pow(r-c,2)/pow(r,2)*100;
 }
 
 int main() {
@@ -42,7 +43,7 @@ int main() {
     cin.tie(0); cout.tie(0);
     int tc = 1;
     // cin >> tc;
-    // cout<<setprecision(10)<<fixed;
+    cout<<setprecision(10)<<fixed;
     for (int t = 1; t <= tc; t++) {
         // cout << "Case #" << t << ": ";
         solve();

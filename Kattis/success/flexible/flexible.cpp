@@ -33,8 +33,23 @@ vector<string> split(string s, string delimiter){
 }
 
 void solve() {
-    // while (cin >> x) {
-    // }
+    int w,p,x;
+    vi b;
+    set<int> sizes;
+    cin>>w>>p;
+    ITER(p){
+        cin>>x;
+        b.push_back(x);
+    }
+    b.push_back(0);
+    b.push_back(w);
+    ITER(b.size()){
+        REP(j,i+1,b.size()){
+            sizes.insert(abs(b[i]-b[j]));
+        }
+    }
+    set<int>::iterator it = sizes.begin();
+    while(it!=sizes.end())cout<<*it++<<" ";
 }
 
 int main() {
@@ -42,7 +57,6 @@ int main() {
     cin.tie(0); cout.tie(0);
     int tc = 1;
     // cin >> tc;
-    // cout<<setprecision(10)<<fixed;
     for (int t = 1; t <= tc; t++) {
         // cout << "Case #" << t << ": ";
         solve();

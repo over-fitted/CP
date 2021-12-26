@@ -32,9 +32,37 @@ vector<string> split(string s, string delimiter){
     return ans;
 }
 
+ll APSum(ll start, ll interval, ll numberOfEle){
+    return (numberOfEle/2.0)*(2*start + (numberOfEle-1)*interval);
+}
+
+int gcd(int a, int b)
+{
+    // Everything divides 0
+    if (a == 0)
+       return b;
+    if (b == 0)
+       return a;
+  
+    // base case
+    if (a == b)
+        return a;
+  
+    // a is greater
+    if (a > b)
+        return gcd(a-b, b);
+    return gcd(a, b-a);
+}
+
+long long lcm(int a, int b)
+{
+    return (a / gcd(a, b)) * b;
+}
+
 void solve() {
-    // while (cin >> x) {
-    // }
+    int p,q,s;
+    cin>>p>>q>>s;
+    cout<<(lcm(p,q)<=s?"yes":"no");
 }
 
 int main() {

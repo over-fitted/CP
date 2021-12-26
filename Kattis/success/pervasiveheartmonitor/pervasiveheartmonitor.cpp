@@ -33,8 +33,34 @@ vector<string> split(string s, string delimiter){
 }
 
 void solve() {
-    // while (cin >> x) {
-    // }
+    string x;
+    while(getline(cin,x)){
+        string name;
+        int nameEnd = 0;
+        vector<string> v = split(x, " ");
+        vector<string> temps;
+        if(!isdigit(v[0][0])){
+            while(!isdigit(v[nameEnd][0])){
+                name+=v[nameEnd]+" ";
+                nameEnd++;
+            }
+            temps = vector<string>(v.begin()+nameEnd,v.end());
+        }
+        else {
+            nameEnd=v.size()-1;
+            while(!isdigit(v[nameEnd][0])){
+                name=v[nameEnd]+" "+name;
+                nameEnd--;
+            }
+            temps = vector<string>(v.begin(),v.begin()+nameEnd+1);
+        }
+        double ans=0;
+        for(string s:temps){
+            ans+=stod(s);
+        }
+        cout<<setprecision(10)<<fixed;
+        cout<<ans/temps.size()<<" "<<name<<"\n";
+    }
 }
 
 int main() {
@@ -42,7 +68,6 @@ int main() {
     cin.tie(0); cout.tie(0);
     int tc = 1;
     // cin >> tc;
-    // cout<<setprecision(10)<<fixed;
     for (int t = 1; t <= tc; t++) {
         // cout << "Case #" << t << ": ";
         solve();

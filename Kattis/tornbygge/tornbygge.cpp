@@ -33,8 +33,16 @@ vector<string> split(string s, string delimiter){
 }
 
 void solve() {
-    // while (cin >> x) {
-    // }
+    ll n;
+    cin>>n;
+    ll prev,x,ans=1;
+    cin>>prev;
+    ITER(n-1){
+        cin>>x;
+        if(x>prev)ans++;
+        prev=x;
+    }
+    cout<<ans;
 }
 
 int main() {
