@@ -13,6 +13,12 @@ ll APSum(ll start, ll interval, ll numberOfEle){
     return (numberOfEle/2.0)*(2*start + (numberOfEle-1)*interval);
 }
 
+int factorial(int n)
+{
+    // single line to find factorial
+    return (n == 1 || n == 0) ? 1 : n * factorial(n - 1);
+}
+
 int gcd(int a, int b)
 {
     // Everything divides 0
@@ -48,6 +54,25 @@ int bSearchNearestHigher(int target, vector<int> v,int start, int end){
     if(v[halfWay]==target)return halfWay;
     else if(v[halfWay]<target)return bSearchNearestHigher(target,v,halfWay+1,end);
     else return bSearchNearestHigher(target,v,start,halfWay-1);
+}
+
+// (X[i], Y[i]) are coordinates of i'th point.
+double polygonArea(vector<double> X, vector<double> Y)
+{
+    // Initialize area
+    double area = 0.0;
+    int n = X.size();
+  
+    // Calculate value of shoelace formula
+    int j = n - 1;
+    for (int i = 0; i < n; i++)
+    {
+        area += (X[j] + X[i]) * (Y[j] - Y[i]);
+        j = i;  // j is previous vertex to i
+    }
+  
+    // Return absolute value
+    return abs(area / 2.0);
 }
 
 int main(){
