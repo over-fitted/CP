@@ -7,6 +7,13 @@ string tolower(string x){
     return x;
 }
 
+bool is_number(const std::string& s)
+{
+    std::string::const_iterator it = s.begin();
+    while (it != s.end() && std::isdigit(*it)) ++it;
+    return !s.empty() && it == s.end();
+}
+
 // 1d array
 template <typename T>
 void printArr(T *arr, unsigned int n)
